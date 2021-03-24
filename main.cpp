@@ -10,9 +10,11 @@ using namespace std;
 
 static int packetCount = 0;
 
-void packetHandler(u_char *userData, const struct pcap_pkthdr* pkthdr, const u_char* packet) {
+void packetHandler(u_char *useprData, const struct pcap_pkthdr* pkthdr, const u_char* packet) {
   cout << ++packetCount << " packet(s) captured" << endl;
-  cout<<"Packet length:"<<pkthdr.len<<", time interval:"<< pkthdr.ts <<endl;
+  cout<<"Packet length:"<<pkthdr->len<<", time interval:" << pkthdr->ts.tv_sec <<endl;
+//   cout<<"useprData:"<<useprData<<endl;
+  cout<<"Packet:"<<string((char*)packet)<<endl;
 }
 
 int main() {
