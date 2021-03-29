@@ -1,4 +1,4 @@
-# Simpe Packet Inspector
+# Simple Network Packet Inspector
 
 It used [Pcap](https://github.com/the-tcpdump-group/libpcap) library for receiving packet from kernel.
 
